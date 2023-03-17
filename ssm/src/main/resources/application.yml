@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/book
+      username: root
+      password: 123456
+
+      # 不参与热部署的文件和文件夹
+  devtools:
+    restart:
+      exclude: static/**,config/application.yml,public/**
+      enabled: false      # 关闭热部署
+
+
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto
+       # 开启 mybatis-plus的日志
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+
+
+
