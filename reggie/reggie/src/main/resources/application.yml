@@ -1,0 +1,31 @@
+server:
+  port: 10
+
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/reggier?serverZone=UTC
+      username: root
+      password: 123456
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+    password: helloworld
+  cache:
+    redis:
+      time-to-live:  1500000
+
+
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+
+reggie:
+     path: D:\Java资料\刷题模式\reggie\Image
